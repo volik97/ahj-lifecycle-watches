@@ -6,7 +6,7 @@ function Watch({name, timezone, index, watches, changeWatches}:{changeWatches:  
     useEffect(() => {
             setInterval(() => setCurrentTime(now), 1000)
             return clearInterval(setInterval(() => setCurrentTime(now), 1000))
-        }, []);
+        });
     const watchesDelete = (name: string) => {
         changeWatches(watches.filter((item) => item.name !== name))
     }
